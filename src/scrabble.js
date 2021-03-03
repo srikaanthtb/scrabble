@@ -6,8 +6,12 @@ class Scrabble {
 }
 
 Scrabble.prototype.score = function(){
-if (this.word === 'a'){
-    this.points += 1;
-}
+    let letters = this.word.split('')
+    letters.forEach(letter => {
+        if (letter === 'a'){
+            this.points += 1;
+        }
+    });
+
 return this.points;
 }

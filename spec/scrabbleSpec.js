@@ -5,6 +5,11 @@ describe ('scrabble', function(){
         expect(scrabble.score()).toEqual(1);
     });
 
+    it ('counts letter aaa as 3', function(){
+        const scrabble = new Scrabble('aaa')
+        expect(scrabble.score()).toEqual(3);
+    });
+
     it ('counts letter nil as 0', function(){
         const scrabble = new Scrabble('f')
         expect(scrabble.score()).toEqual(0);
