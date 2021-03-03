@@ -8,8 +8,10 @@ class Scrabble {
 Scrabble.prototype.score = function(){
     let letters = this.word.split('')
     letters.forEach(letter => {
-        if (letter === 'a'){
+        switch (letter){
+            case 'a':
             this.points += 1;
+            break
         }
     });
 
