@@ -6,7 +6,7 @@ class Scrabble {
 }
 
 Scrabble.prototype.score = function(){
-    let letters = this.word.split('')
+    let letters = this.word.toLowerCase().split('')
     letters.forEach(letter => {
         switch (letter){
             case 'a':
