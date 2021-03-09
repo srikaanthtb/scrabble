@@ -15,6 +15,11 @@ describe ('scrabble', function(){
         expect(scrabble.score()).toEqual(3);
     });
 
+    it ('counts letter aeA as 3', function(){
+        const scrabble = new Scrabble('aeA')
+        expect(scrabble.score()).toEqual(3);
+    });
+
     it ('counts letter aaf as 2', function(){
         const scrabble = new Scrabble('aaf')
         expect(scrabble.score()).toEqual(2);

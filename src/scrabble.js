@@ -10,6 +10,7 @@ Scrabble.prototype.score = function(){
     letters.forEach(letter => {
         switch (letter){
             case 'a':
+            case 'e':
             this.points += 1;
             break
         }
