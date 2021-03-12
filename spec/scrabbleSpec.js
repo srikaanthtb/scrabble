@@ -25,8 +25,13 @@ describe ('scrabble', function(){
         expect(scrabble.score()).toEqual(2);
     });
 
-    it ('counts letter nil as 0', function(){
-        const scrabble = new Scrabble('f')
+    it ('counts letter abf as 2', function(){
+        const scrabble = new Scrabble('abf')
+        expect(scrabble.score()).toEqual(4);
+    });
+
+    it ('counts letter null as 0', function(){
+        const scrabble = new Scrabble(null)
         expect(scrabble.score()).toEqual(0);
     });
 

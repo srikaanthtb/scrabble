@@ -6,6 +6,9 @@ class Scrabble {
 }
 
 Scrabble.prototype.score = function(){
+    if (this.word === null ) {
+        this.points == 0;
+    } else {
     let letters = this.word.toLowerCase().split('')
     letters.forEach(letter => {
         switch (letter){
@@ -13,8 +16,10 @@ Scrabble.prototype.score = function(){
             case 'e':
             this.points += 1;
             break
+            case 'b':
+                this.points +=3;
         }
     });
-
+    }
 return this.points;
 }
