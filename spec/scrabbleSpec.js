@@ -22,17 +22,22 @@ describe ('scrabble', function(){
 
     it ('counts letter aaf as 2', function(){
         const scrabble = new Scrabble('aaf')
-        expect(scrabble.score()).toEqual(2);
+        expect(scrabble.score()).toEqual(6);
     });
 
     it ('counts letter abf as 2', function(){
         const scrabble = new Scrabble('abf')
-        expect(scrabble.score()).toEqual(4);
+        expect(scrabble.score()).toEqual(8);
     });
 
     it ('counts letter null as 0', function(){
         const scrabble = new Scrabble(null)
         expect(scrabble.score()).toEqual(0);
+    });
+
+    it ('counts letter guardian as 10', function(){
+        const scrabble = new Scrabble('GUARDIAN')
+        expect(scrabble.score()).toEqual(10);
     });
 
 });
